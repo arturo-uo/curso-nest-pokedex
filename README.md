@@ -28,7 +28,7 @@ git init
 git add .
 git commit -m "Primer commit"
 
-git remote add origin https://github.com/tu_usuario/mi-proyecto.git
+git remote add origin https://github.com/arturo-uo/curso-nest-pokedex.git
 
 git branch -M main
 git push -u origin main
