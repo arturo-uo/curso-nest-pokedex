@@ -20,3 +20,23 @@ docker-compose up -d
 ## Stack usado
 * MongoDB
 * Nest
+
+# Subir código
+
+```
+git init
+git add .
+git commit -m "Primer commit"
+
+git remote add origin https://github.com/tu_usuario/mi-proyecto.git
+
+git branch -M main
+git push -u origin main
+```
+
+Comandos para subir código con los siguientes cambios
+```
+git add .
+git commit -m "Descripción de cambios"
+git push
+```
