@@ -19,15 +19,14 @@ import { JoiValidationSchema } from './config/joi.validation';
       rootPath: join(__dirname, '..', 'public'),
     }),
     //MongooseModule.forRoot(process.env.MONGODB ?? 'mongodb://localhost:27017/nest-pokemon',{
-    // MongooseModule.forRoot('mongodb://arturouo_db_user:DJZoHXiPosnjoV1q@mongodbcluster.0uitjrl.mongodb.net',{///nest-pokemon?retryWrites=true&w=majority',{
-    //   dbName: 'nest-pokemon',
+    //mongodb+srv://arturouo_db_user:DJZoHXiPosnjoV1q@mongodbcluster.0uitjrl.mongodb.net/
+    //mongodb+srv://<db_user>:<db_password>@mongodbcluster.0uitjrl.mongodb.net/?appName=MongoDBCluster
+    MongooseModule.forRoot(process.env.MONGODB ?? 'mongodb://localhost:27017/nest-pokemon'),
+    // MongooseModule.forRootAsync('mongodb://arturouo_db_user:DJZoHXiPosnjoV1q@mongodbcluster.0uitjrl.mongodb.net/nest-pokemon?retryWrites=true&w=majority',{
+    //   useFactory: async () => ({
+    //     dbName: 'nest-pokemon'
+    //   }),
     // }),
-    MongooseModule.forRootAsync({
-      useFactory: async () => ({
-        uri: 'mongodb://arturouo_db_user:DJZoHXiPosnjoV1q@mongodbcluster.0uitjrl.mongodb.net',
-        dbName: 'nest-pokemon'
-      }),
-    }),
     PokemonModule,
     CommonModule,
     SeedModule,  
